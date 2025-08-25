@@ -1,6 +1,6 @@
 {
-  "name": "Grow a Garden Checklist",
-  "short_name": "My Garden",
+  "name": "GAG Checklist",
+  "short_name": "GAG Checklist",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#733F27",
