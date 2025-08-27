@@ -1,9 +1,10 @@
 {
   "name": "GAG checklist",
   "short_name": "GAG Checklist",
-  "start_url": "./index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#733F27",
+  "theme_color": "#733F27",
   "description": "A checklist for all the seeds in the game.",
   "icons": [
     {
