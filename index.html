@@ -54,6 +54,7 @@ input[type="checkbox"] {
 <body>
   <div class="gb">
     <h1 class="text">GAG Checklist</h1>
+    <p id="version-number"></p>
   </div>
   <br>
   <div class="counter">
@@ -716,6 +717,13 @@ input[type="checkbox"] {
   // Run the load function and then update the counter on page load
   loadState();
   updateCounter();
+
+  fetch('manifest.json')
+    .then(response => response,json())
+    .then(manifest => {
+      const version = manifest.version;
+      document.getElementById('version-number').textContent = 'Version: ' + version;
+    });
 </script>
 </body>
 </html>
