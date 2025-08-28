@@ -1,0 +1,39 @@
+body {
+  background-color: #733F27;
+  background-size: cover;
+  font-family: 'Comic Neue Angular', sans-serif;
+  color: white;
+  margin-top: 50px;
+}
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.checklist-item h1 {
+    font-family: 'Comic Neue Angular', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+.icon {
+  height: 50px;
+  width: 50px;
+}
+input[type="checkbox"] {
+    width: 2em;
+    height: 2em;
+}
+  .gb {
+  background-color: green;
+  height: 45px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.gb h1 {
+  margin: 0;
+  padding: 15px;
+}
