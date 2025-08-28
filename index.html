@@ -8,48 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Grow a Garden Checklist</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet"
+href="style.css">
   <meta name="theme-color" content="#733F27">
-  <style>
-body {
-  background-color: #733F27;
-  background-size: cover;
-  font-family: 'Comic Neue Angular', sans-serif;
-  color: white;
-  margin-top: 50px;
-}
-.checklist-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.checklist-item h1 {
-    font-family: 'Comic Neue Angular', sans-serif;
-    font-weight: 700;
-    font-size: 2em;
-    margin: 0;
-}
-.icon {
-  height: 50px;
-  width: 50px;
-}
-input[type="checkbox"] {
-    width: 2em;
-    height: 2em;
-}
-  .gb {
-  background-color: green;
-  height: 45px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-}
-.gb h1 {
-  margin: 0;
-  padding: 15px;
-}
-  </style>
 </head>
 <body>
   <div class="gb">
@@ -669,53 +630,6 @@ input[type="checkbox"] {
   <img src="RomanescoProduce.png" alt="A Romanesco" class="icon"> 
   <h1 class="text">Romanesco</h1>
   </div>
-  <script>
-  const checkboxes = document.querySelectorAll('.item-checkbox');
-  const checkedCountElement = document.getElementById('checkedCount');
-  const totalCountElement = document.getElementById('totalCount');
-
-  // Load the saved state when the page starts
-  function loadState() {
-    const savedState = localStorage.getItem('checklistState');
-
-    if (savedState) {
-      const checkedIds = JSON.parse(savedState);
-      checkedIds.forEach(id => {
-        const checkbox = document.getElementById(id);
-        if (checkbox) {
-          checkbox.checked = true;
-        }
-      });
-    }
-  }
-
-  // Save the current state of the checkboxes
-  function saveState() {
-    const checkedCheckboxes = document.querySelectorAll('.item-checkbox:checked');
-    const checkedIds = Array.from(checkedCheckboxes).map(checkbox => checkbox.id);
-    localStorage.setItem('checklistState', JSON.stringify(checkedIds));
-  }
-
-  // Update the counter and save the state
-  function updateCounter() {
-    const checkedCheckboxes = document.querySelectorAll('.item-checkbox:checked');
-    const checkedCount = checkedCheckboxes.length;
-    checkedCountElement.textContent = checkedCount;
-
-    saveState(); // Call the save function after every change
-  }
-
-  // Set the initial total count
-  totalCountElement.textContent = checkboxes.length;
-
-  // Add event listeners to all checkboxes
-  checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', updateCounter);
-  });
-
-  // Run the load function and then update the counter on page load
-  loadState();
-  updateCounter();
-</script>
+  <script src="savecheckbox.js"></script>
 </body>
 </html>
