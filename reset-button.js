@@ -6,12 +6,12 @@ class ResetButton extends HTMLElement {
         
         .reset-btn {
           font-family: 'Comic Neue Angular', sans serif;
-          font-size: 1.5rem;
+          font-size: 1rem;
           color: white;
           background-color: #f44336;
           border: none;
           border-radius: 5px;
-          padding: 10px 20px;
+          padding: 8px 16px;
           cursor: pointer;
           transition: background-color 0.3s ease-in-out;
         }
@@ -29,6 +29,10 @@ class ResetButton extends HTMLElement {
       checkboxes.forEach(checkbox => {
         checkbox.checked = false;
       });
+
+      localStorage.clear();
+
+      window.location.reload();
     });
   }
 }
