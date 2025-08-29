@@ -5,7 +5,7 @@ class ResetButton extends HTMLElement {
         @import url('https://fonts.cdnfonts.com/css/comic-neue-angular');
         
         .reset-btn {
-          font-family: 'Comic Neue Angular', sans serif;
+          font-family: 'Comic Neue Angular', sans-serif;
           font-size: 1rem;
           color: white;
           background-color: #f44336;
