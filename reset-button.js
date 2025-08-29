@@ -11,7 +11,7 @@ class ResetButton extends HTMLElement {
           background-color: #f44336;
           border: none;
           border-radius: 5px;
-          padding: 8px 16px;
+          padding: 6px 16px;
           cursor: pointer;
           transition: background-color 0.3s ease-in-out;
         }
