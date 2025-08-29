@@ -37,3 +37,9 @@ input[type="checkbox"] {
   margin: 0;
   padding: 15px;
 }
+.counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
