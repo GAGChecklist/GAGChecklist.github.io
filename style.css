@@ -46,9 +46,9 @@ input[type="checkbox"] {
   margin: 0;
   padding: 15px;
 }
-.container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
+reset-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
